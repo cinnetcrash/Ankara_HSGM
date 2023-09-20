@@ -27,4 +27,4 @@ This workflkow does not run without input files, and there are multiple ways to 
 ```
 
 # using singularity on paired-end reads in a directory called 'reads'
-nextflow run cinnetcrash/Ankara_HSGM -c file.config -profile docker --reads <directory to reads> --outdir <directory to output files>
+nextflow run cinnetcrash/Ankara_HSGM -c Ankara.config -profile docker --reads <directory to reads> --outdir <directory to output files>
