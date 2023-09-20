@@ -25,18 +25,6 @@ This workflkow does not run without input files, and there are multiple ways to 
 - using params, directories and files specified in a [config file](https://github.com/UPHL-BioNGS/Cecret#using-config-files)
 
 ```
+
 # using singularity on paired-end reads in a directory called 'reads'
-nextflow run UPHL-BioNGS/Cecret -profile singularity --reads <directory to reads>
-
-# using docker on samples specified in SampleSheet.csv
-nextflow run UPHL-BioNGS/Cecret -profile docker --sample_sheet SampleSheet.csv
-
-# using a config file containing all inputs
-nextflow run UPHL-BioNGS/Cecret -c file.config
-```
-
-Results are roughly organiized into 'params.outdir'/< analysis >/sample.result
-
-A file summarizing all results is found in `'params.outdir'/cecret_results.csv` and `'params.outdir'/cecret_results.txt`.
-
-Consensus sequences can be found in `'params.outdir'/consensus` and end with `*.consensus.fa`.
+nextflow run cinnetcrash/Ankara_HSGM -c file.config -profile docker --reads <directory to reads> --outdir <directory to output files>
