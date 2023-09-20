@@ -1,33 +1,7 @@
 #!/usr/bin/env nextflow
 
-//# For aesthetics - and, yes, we are aware that there are better ways to write this than a bunch of 'println' statements
-println('') 
-println('  ____ _____ ____ ____  _____ _____')
-println(' / ___| ____/ ___|  _ \\| ____|_   _|')
-println('| |   |  _|| |   | |_) |  _|   | |')
-println('| |___| |__| |___|  _ <| |___  | |')
-println(' \\____|_____\\____|_| \\_\\_____| |_|')
-
-println('Version: ' + workflow.manifest.version)
-println('')
-println('Currently using the Cecret workflow for use with amplicon Illumina library prep on MiSeq with a corresponding reference genome.\n')
-println('Author: Erin Young')
-println('email: eriny@utah.gov')
-println('')
-
-println('Cecret is named after a real lake!')
-println('Visit https://www.alltrails.com/trail/us/utah/cecret-lake-trail to learn more.')
-println('Not everyone can visit in person, so here is some ASCII art of nucleotides in lake forming a consensus sequence.')
-println('                    _________ ______')
-println('               _ /      G    A   T   \\_____')
-println('          __/    C      C A    G      T  C \\')
-println('        /    G     A   T   T  A   G  G    T  \\_')
-println('        | G       G  C   A            G   T     \\')  
-println('        \\      A     C     G   A   T    A  G  T  \\__')
-println('         \\_           C       G    ____ _____ __ C  \\________')
-println('            \\__T______ ___________/                \\ C T G A G G T C G A T A') 
-println('')
-println('')
+println('Merhaba. Halk Sağlığı Genel Müdürlüğü için hazırlanmış olan Illumina Paragon Analiz Pipeline şu anda çalışmaya başlıyor...')
+println('Bu pipeline ı kullandığınız için teşekkürler.')
 
 //# copying the confit template and ending the workflow
 params.config_file                          = false
@@ -69,7 +43,7 @@ params.nanopore                             = workflow.launchDir + '/nanopore'
 params.sra_accessions                       = []
 params.primer_bed                           = ''
 params.amplicon_bed                         = ''
-params.primer_set                           = 'ncov_V4'
+params.primer_set                           = 'ncov_V3'
 params.reference_genome                     = ''
 params.gff                                  = ''
 
@@ -159,8 +133,8 @@ params.seqyclean_options                    = '-minlen 25 -qual'
 params.snpdists_options                     = '-c'
 
 //# for optional contamination determination
-params.kraken2                              = false
-params.kraken2_db                           = false
+params.kraken2                              = true
+params.kraken2_db                           = '/media/cinnet/PortableSSD1/kraken2_db/minikraken2_v2_8GB_201904_UPDATE/'
 params.kraken2_options                      = ''
 
 //# for using an included version of nextclade dataset
