@@ -73,8 +73,8 @@ println('The files and directory for results is ' + params.outdir)
 println('The species used to determine default variables and subworkflows is ' + params.species)
 
 //# roughly grouping cpu usage
-params.maxcpus                              = 8
-params.medcpus                              = 4
+params.maxcpus                              = 10
+params.medcpus                              = 6
 println('The maximum number of CPUS used in this workflow is ' + params.maxcpus)
 
 //# specifying the core workflow
@@ -111,11 +111,11 @@ params.fastp_options                        = ''
 params.fastqc_options                       = ''
 params.filter_options                       = ''
 params.iqtree2_options                      = '-ninit 2 -n 2 -me 0.05 -m GTR'
-params.ivar_consensus_options               = '-q 20 -t 0.6 -n N'
+params.ivar_consensus_options               = '-q 15 -t 0.1 -n N'
 params.ivar_trim_options                    = ''
-params.ivar_variants_options                = '-q 20 -t 0.6'
+params.ivar_variants_options                = '-q 15 -t 0.1'
 params.minimap2_options                     = '-K 20M'
-params.minimum_depth                        = 100
+params.minimum_depth                        = 20
 params.mpileup_depth                        = 8000
 params.multiqc_options                      = ''
 params.mafft_options                        = '--maxambiguous 0.5'
