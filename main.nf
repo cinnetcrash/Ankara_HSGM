@@ -110,10 +110,10 @@ params.bcftools_variants_options            = ''
 params.fastp_options                        = ''
 params.fastqc_options                       = ''
 params.filter_options                       = ''
-params.iqtree2_options                      = '-ninit 2 -n 2 -me 0.05 -m GTR'
-params.ivar_consensus_options               = '-q 12 -t 0.1 -n N'
+params.iqtree2_options                      = '-ninit 2 -n 2 -me 0.09 -m GTR'
+params.ivar_consensus_options               = '-q 10 -t 0.9 -n N'
 params.ivar_trim_options                    = ''
-params.ivar_variants_options                = '-q 12 -t 0.1'
+params.ivar_variants_options                = '-q 10 -t 0.9'
 params.minimap2_options                     = '-K 20M'
 params.minimum_depth                        = 10
 params.mpileup_depth                        = 8000
@@ -129,7 +129,7 @@ params.samtools_plot_ampliconstats_options  = '-size 1200,900 -size2 1200,900 -s
 params.samtools_markdup_options             = ''
 params.samtools_fixmate_options             = ''
 params.seqyclean_contaminant_file           = '/Adapters_plus_PhiX_174.fasta'
-params.seqyclean_options                    = '-minlen 15 -qual'
+params.seqyclean_options                    = '-minlen 10 -qual'
 params.snpdists_options                     = '-c'
 
 //# for optional contamination determination
